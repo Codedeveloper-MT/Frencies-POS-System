@@ -1,0 +1,39 @@
+﻿<Window x:Class="Frencies_POS_System.ConfirmOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frencies_POS_System"
+        mc:Ignorable="d"
+        Title="Confirm Order" Height="450" Width="800">
+    <Grid Background="Blue">
+        <StackPanel Margin="40,0,40,0" VerticalAlignment="Center" Height="326">
+
+            <Label Content="How would you like to pay?" FontSize="26"
+                   FontWeight="Bold" FontStyle="Italic" Foreground="White"
+                   HorizontalAlignment="Center"/>
+
+            <StackPanel HorizontalAlignment="Center" Margin="0,25,0,25">
+                <RadioButton x:Name="rdoCard" GroupName="Payment"
+                             Content="Card or QR on phone"
+                             FontSize="20" Foreground="White" IsChecked="True" Margin="0,0,0,12"/>
+                <RadioButton x:Name="rdoCash" GroupName="Payment"
+                             Content="Cash at the hot food counter"
+                             FontSize="20" Foreground="White"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,25">
+                <TextBlock Text="To pay:" FontSize="24" FontWeight="Bold"
+                           Foreground="White" Margin="0,0,10,0"/>
+                <TextBlock x:Name="txtToPay" Text="R0.00" FontSize="24" FontWeight="Bold"
+                           Foreground="White"/>
+            </StackPanel>
+            <Button x:Name="btnPlaceOrder" Content="Place order"
+                    Width="200" Height="45" FontSize="18" Click="btnPlaceOrder_Click"/>
+
+        </StackPanel>
+        <Button x:Name="btnBack" Content="Cancel"
+        Width="200" FontSize="18" Margin="521,260,79,107" Click="btnBack_Click"/>
+
+    </Grid>
+</Window>

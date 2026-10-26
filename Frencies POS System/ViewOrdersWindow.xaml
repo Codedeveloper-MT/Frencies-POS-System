@@ -1,0 +1,41 @@
+﻿<Window x:Class="Frencies_POS_System.ViewOrdersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frencies_POS_System"
+        mc:Ignorable="d"
+        Title="My Order" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Heading -->
+        <Label Grid.Row="0" Content="Your order" FontSize="24" FontWeight="Bold"/>
+
+        <!-- Where the user sees their orders -->
+        <Border Grid.Row="1" Background="LightGray" Padding="15" Margin="0,5,0,10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="txtOrders" FontSize="18" TextWrapping="Wrap"
+                           Text=" "/>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Total -->
+        <Grid Grid.Row="2" Margin="0,0,0,10">
+            <Label Content="Total" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="txtOrderTotal" Text="R0.00" FontSize="20" FontWeight="Bold"
+                       HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Confirm order" Width="140" Height="36" FontSize="16"
+                    Margin="0,0,10,0" Click="btnConfirmOrder_click"/>
+            <Button Content="Close" Width="100" Height="36" Click="Button_Click"/>
+        </StackPanel>    </Grid>
+</Window>

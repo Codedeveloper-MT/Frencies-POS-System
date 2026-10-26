@@ -1,0 +1,49 @@
+﻿<Window x:Class="Frencies_POS_System.SendReciptSlipWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Frencies_POS_System"
+        mc:Ignorable="d"
+        Title="Send Recipt Slip" Height="600" Width="800">
+    <Grid Background="Blue">
+        <Border Background="White" BorderBrush="Gold" BorderThickness="3"
+                Width="500" Margin="20" Padding="25" VerticalAlignment="Center">
+            <StackPanel>
+
+                <Label Content="Order slip" FontSize="22" FontWeight="Bold" FontStyle="Italic"
+                       HorizontalAlignment="Center"/>
+
+                <TextBlock x:Name="txtSlipNumber" Text="" FontSize="48" FontWeight="Bold"
+                           Foreground="Blue" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+        
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <Label Content="Total" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="txtSlipTotal" Text="R0.00" FontSize="18" FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text=" · " FontSize="18" VerticalAlignment="Center"/>
+                    <Label x:Name="lblPayMethod" Content="Cash at counter" FontSize="18"/>
+                </StackPanel>
+
+                <Label Content="Your name and surname" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtFullName" FontSize="16" Height="32" Margin="0,0,0,10"
+                         BorderBrush="Blue" BorderThickness="2"/>
+
+                <Label Content="Your email address" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtEmail" FontSize="16" Height="32" Margin="0,0,0,20"
+                         BorderBrush="Blue" BorderThickness="2"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="btnSendToEmail" Content="Send to email and to the kichen"
+                            Width="254" Height="42" FontSize="16" FontWeight="Bold"
+                            Background="Gold" Margin="0,0,20,0" Click="btnSendToEmail_Click"/>
+                    <Button x:Name="btnBack" Content="Back"
+                            Width="120" Height="42" FontSize="16" Click="btnBack_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
